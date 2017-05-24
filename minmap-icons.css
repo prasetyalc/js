@@ -11,6 +11,43 @@
     transition: border-top-color 0.3s;
 }
 
+.tip-container--expanded + .herolist {
+    border-top-color: #ccc;
+}
+
+.herolist__hero__link:before {
+    -webkit-transition: -webkit-filter 0.5s;
+    -moz-transition: -moz-filter 0.5s;
+    -ms-transition: -ms-filter 0.5s;
+    -o-transition: -o-filter 0.5s;
+    transition: filter 0.5s;
+    transition-property: filter, -webkit-filter;
+}
+
+.herolist__hero__link:before{
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+    filter: brightness(100%);
+}
+
+.herolist__hero:hover .herolist__hero__link:before{
+    -webkit-filter: brightness(150%);
+    -moz-filter: brightness(150%);
+    -o-filter: brightness(150%);
+    -ms-filter: brightness(150%);
+    filter: brightness(150%);
+}
+
+.herolist__hero {
+    display: inline;
+}
+
+.herolist__hero__name {
+    display: none;
+}
+
 .herolist__hero__link:before {
     content: ' ';
     display: inline-block;
